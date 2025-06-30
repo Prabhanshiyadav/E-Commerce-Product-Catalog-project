@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ product.name }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+        h2 {
+            font-size: 32px;
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+        }
+        b {
+            color: #444;
+        }
+        a {
+            text-decoration: none;
+            margin-right: 10px;
+            font-weight: bold;
+            color: #5b21b6;
+        }
+        a:hover {
+            color: #3b0764;
+        }
+    </style>
+</head>
+<body>
+    <h2>{{ product.name }}</h2>
+    <p><b>Price:</b> ₹{{ product.price }}</p>
+    <p><b>Description:</b> {{ product.description }}</p>
+    <p><b>Stock:</b> {{ product.stock_quantity }}</p>
+
+    <br>
+    <a href="{% url 'product_edit' product.pk %}">Edit</a>
+    <a href="{% url 'product_delete' product.pk %}">Delete</a>
+    <a href="{% url 'product_list' %}">Back to list</a>
+</body>
+</html>
