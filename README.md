@@ -50,7 +50,6 @@ ecommerce_catalog_project/
 ├── db.sqlite3
 ├── manage.py
 
-
 ---
 
 ## ⚙️ Setup Instructions
